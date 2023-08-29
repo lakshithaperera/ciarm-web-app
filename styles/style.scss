@@ -1,0 +1,29 @@
+$header1: 2.5rem;
+$header2: 4rem;
+$header3: 2.5rem;
+$header4: 2rem;
+$text: 2rem;
+$gradient: linear-gradient(left, #38d39f, #38a4d3);
+$background-color: #154353;
+$yellow-bg-color: #c9b97f;
+$blue: #38a4d3;
+$gray-text: #2c2c2c;
+$gray-bg-color: #eeeeee;
+$light-gray-bg-color: #bababac7;
+$dark-blue-bg-color: #003a70;
+$light-blue-bg-color: #316094;
+$light-green-bg-color: #99d9d9;
+$dark-green-bg-color: #57b6b1;
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import "global";
+@import "footer";
+@import "fees";
+@import "about";

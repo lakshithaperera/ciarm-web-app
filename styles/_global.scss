@@ -1,0 +1,314 @@
+/* Global Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+}
+p {
+  text-align: justify;
+  color: $dark-blue-bg-color;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: $gray-text;
+}
+.main-head {
+  background: $yellow-bg-color;
+  color: white;
+}
+.nav-item {
+  padding: 0.5rem;
+}
+.icon-size {
+  font-size: 2rem;
+}
+.yellow-bg {
+  background-color: $yellow-bg-color;
+}
+.fg-between {
+  @include flex(center, center, row);
+  gap: 0.5rem;
+}
+.f-column-gap {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.condition-list,
+.schedule-list {
+  list-style-type: upper-alpha;
+}
+.d-blue-bg {
+  background-color: $dark-blue-bg-color !important;
+}
+.l-blue-bg {
+  background-color: $light-blue-bg-color !important;
+}
+.l-green-bg {
+  background-color: $light-green-bg-color !important;
+}
+.d-green-bg {
+  background-color: $dark-green-bg-color !important;
+}
+.text-blue {
+  color: $dark-blue-bg-color;
+}
+.text-green {
+  color: $light-green-bg-color;
+}
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid $dark-blue-bg-color;
+}
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid $dark-blue-bg-color;
+}
+.gray-square {
+  border: 20px solid $light-gray-bg-color;
+}
+.table th {
+  background-color: unset;
+}
+.l-green-circle {
+  position: relative;
+  padding: 1rem;
+  margin-bottom: 4rem;
+  background: #ffffff;
+  background: radial-gradient(at center, #ffffff, #64c7c0);
+  border-radius: 50%;
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  // width: 500px;
+}
+.rounded-img {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+}
+.school-icon,
+.badge-icon,
+.brain-icon,
+.internet-icon {
+  padding: 1rem;
+  height: 6rem;
+  width: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: $yellow-bg-color;
+  position: absolute;
+}
+.school-icon {
+  top: -3.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.badge-icon {
+  top: 50%;
+  left: -3.5rem;
+  transform: translateY(-50%);
+}
+.brain-icon {
+  bottom: -3.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.internet-icon {
+  top: 50%;
+  right: -3.5rem;
+  transform: translateY(-50%);
+}
+.pointer {
+  cursor: pointer;
+}
+.divider {
+  display: flex;
+  width: 100%;
+  &-first {
+    padding: 4px;
+    background-color: #f9d120;
+    flex-grow: 1;
+  }
+  &-second {
+    padding: 4px;
+    background-color: #d0021b;
+    flex-grow: 1;
+  }
+  &-third {
+    padding: 4px;
+    background-color: black;
+    flex-grow: 1;
+  }
+}
+.whatsapp {
+  background-color: $dark-blue-bg-color;
+  color: white;
+  // padding: 1rem;
+  padding: 0 0 0.5rem 0;
+
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+.custom-btn {
+  border: none;
+  padding: 0.5rem 1rem;
+  background-color: $light-green-bg-color;
+  border-radius: 25px;
+}
+.fixed-btn {
+  position: fixed;
+  bottom: 18%;
+  right: 5%;
+}
+.parallax {
+  height: 700px;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  // }
+  // min-height: 800px;
+  // /* Create the parallax scrolling effect */
+  // background-attachment: fixed;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  &-first {
+    background-image: url("../assets/img/location/chemistry.png");
+  }
+  &-second {
+    background-image: url("../assets/img/location/balm-tree.png");
+  }
+  &-third {
+    background-image: url("../assets/img/location/computer.png");
+  }
+  &-fourth {
+    background-image: url("../assets/img/location/gym.png");
+  }
+  &-fifth {
+    background-image: url("../assets/img/location/football.png");
+  }
+  &-sixth {
+    background-image: url("../assets/img/location/cafe.png");
+  }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 50px;
+  width: 50px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  background: $light-green-bg-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-control-next-icon:after {
+  content: ">";
+  font-size: 40px;
+  color: $dark-blue-bg-color;
+}
+
+.carousel-control-prev-icon:after {
+  content: "<";
+  font-size: 40px;
+  color: $dark-blue-bg-color;
+}
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+.scale-icon {
+  &:hover > img {
+    transform: scale(1.2);
+    transition: all ease-in-out 1s;
+  }
+}
+
+// about-us
+.fade-img,
+.fade-content {
+  animation: fadeBackground 1s;
+  animation-fill-mode: forwards;
+}
+
+.custom-card-head {
+  background-color: $light-green-bg-color;
+  color: white;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+.custom-card-body {
+  background-color: $yellow-bg-color;
+  color: white;
+}
+@media only screen and (max-width: 633px) {
+  .badge-icon {
+    left: 0;
+  }
+  .internet-icon {
+    right: 0;
+  }
+}
+@keyframes fadeBackground {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+html {
+  height: 100%;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
